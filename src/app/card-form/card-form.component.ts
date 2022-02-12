@@ -8,6 +8,11 @@ import { FormGroup,FormControl } from '@angular/forms';
 })
 export class CardFormComponent implements OnInit {
 
+  cardForm=new FormGroup({
+    name:new FormControl('')
+  });
+
+  // a=1;
   constructor() { }
 
   ngOnInit(): void {
