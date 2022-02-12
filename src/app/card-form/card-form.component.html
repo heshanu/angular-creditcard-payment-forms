@@ -1,3 +1,6 @@
 <form [formGroup]="cardForm" action="">
     <input type="text" formControlName="name">
 </form>
+
+{{cardForm.value|json|uppercase}}
+{{cardForm.valid}}
