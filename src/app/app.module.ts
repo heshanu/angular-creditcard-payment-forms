@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { CardFormComponent } from './card-form/card-form.component';
 
 //added re
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CardFormComponent
   ],
   imports: [
     BrowserModule,
