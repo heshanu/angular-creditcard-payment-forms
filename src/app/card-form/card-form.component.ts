@@ -9,13 +9,17 @@ import { FormGroup,FormControl,Validators,FormBuilder} from '@angular/forms';
 export class CardFormComponent implements OnInit {
  cardForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    cardNumber:new FormControl(''),
+    cardNumber:new FormControl('',[Validators.required,Validators.minLength(8)]),
     expiration:new FormControl(''),
-    securityCode:new FormControl('')  
+    securityCode:new FormControl('',[Validators.required,Validators.minLength(3)])  
   });
 
   constructor() {}
 
   ngOnInit(): void {
   } 
+
+  onSubmit(){
+    console.log('sumiited');
+  }
 }
