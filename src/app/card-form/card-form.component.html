@@ -1,6 +1,7 @@
-<form [formGroup]="cardForm" action="">
-    <input type="text" formControlName="name">
+<form [formGroup]="$any(cardForm)">
+  <app-input [control]="cardForm.get('name')"></app-input>
 </form>
-
-{{cardForm.value|json|uppercase}}
-{{cardForm.valid}}
+<hr />
+<div>Form Contents: {{ cardForm.value | json }}</div>
+<div>Form is valid: {{ cardForm.valid }}</div>
+<div>Errors around name: {{ $any(cardForm).controls.name.errors | json }}</div>
