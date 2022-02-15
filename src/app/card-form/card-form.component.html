@@ -1,5 +1,8 @@
 <form [formGroup]="$any(cardForm)">
   <app-input label="Name" [controls]="cardForm.get('name')"></app-input>
+  <app-input label="Card Number" [controls]="cardForm.get('cardNumber')"></app-input>
+  <app-input label="Expiration" [controls]="cardForm.get('expiration')"></app-input>
+  <app-input label="Security Code" [controls]="cardForm.get('securityCode')"></app-input>
 </form>
 <hr />
 <div>Form Contents: {{ cardForm.value | json }}</div>
